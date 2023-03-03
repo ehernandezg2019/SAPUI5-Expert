@@ -1,0 +1,10 @@
+<core:FragmentDefinition id="_IDGenFragmentHelloDial1" xmlns="sap.m" xmlns:core="sap.ui.core" >
+    <Dialog id="helloDialog" title="Hello {/recipient/name}" > 
+        <beginButton>
+            <Button id="_IDButnClose" text="{i18n>dialogCloseBut}" press=".onCloseDialog" > </Button>
+               
+        </beginButton>
+    
+    </Dialog>
+        
+</core:FragmentDefinition>
