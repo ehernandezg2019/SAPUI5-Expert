@@ -2,12 +2,13 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
     "logaligroup/sapui5/model/Models",
-    "sap/ui/model/resource/ResourceModel"
+    "sap/ui/model/resource/ResourceModel",
+    "./controller/HelloDialog"
 ],
     /**
      *  @param {typeof sap.ui.core.UIComponent} UIComponent 
      */
-    function (UIComponent, Models, ResourceModel) {
+    function (UIComponent, Models, ResourceModel, HelloDialog) {
 
         return UIComponent.extend("logaligroup.sapui5.Component", {
 
@@ -35,6 +36,18 @@ sap.ui.define([
                 // set i18n on the view aqui si se pasa el namespace en var i18nModel
                 var i18nModel = new ResourceModel({ bundleName: "logaligroup.sapui5.i18n.i18n" });
                 this.setModel(i18nModel, "i18n");
+                
+                this._helloDialog = new HelloDialog(this.getRootControl()); //regresa control a quien use la función 
+
+            },
+
+            exit: function(){
+                this._helloDialog.destroy();
+                delete this._helloDialog;   
+            },
+            openHelloDialog: function(){ // esta función es la que se usaria/llamaria en cualquier parte de app
+
+                this._helloDialog.open();
 
 
             }

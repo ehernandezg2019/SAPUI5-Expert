@@ -7,6 +7,12 @@
         <App id="_IDGenApp1">
             <pages>
                 <Page id="_IDGenPage1" title="{i18n>appTitle}">
+                <headerContent>
+                <Button icon="sap-icon://action"  id="helloDialogHeader"  
+                                press=".onOpenDialogHeader" 
+                                class="sapUiSmallMarginEnd"/>
+                                
+                    </headerContent>
                     <content>
                         <mvc:XMLView id="_IDGenXMLView1" viewName="logaligroup.sapui5.view.HelloPanel" />
                       <core:Fragment id="_IDGenFragment11" fragmentName="logaligroup.sapui5.view.Form01" type="XML" />  

@@ -5,8 +5,14 @@
 
 <Panel id="_IDGenPanel1" headerText="{i18n>helloPanel}" class="sapUiResponsiveMargin" width="auto" >
                             <content>
-                                <Button id="_IDGenButton1" text="{i18n>helloDialogBut}" press=".onOpenDialog" class="sapUiSmallMarginEnd"/>
-                                <Button id="_IDGenButton2" text="{i18n>showHelloButtonText}" press=".onShowHello" class="sapUiSmallMarginEnd"/>
+                                <Button icon="sap-icon://action"  id="helloDialogButton"  
+                                text="{i18n>helloDialogBut}" 
+                                press=".onOpenDialog" 
+                                class="sapUiSmallMarginEnd"/>
+                                <Button id="_IDGenButton2" 
+                                text="{i18n>showHelloButtonText}" 
+                                press=".onShowHello" 
+                                class="sapUiSmallMarginEnd"/>
                                 <Input id="_IDGenInput1" value="{/recipient/name}"  valueLiveUpdate="true" width="60%"/>
                                 <Text id="_IDGenText1" text="Hello {/recipient/name}" class="sapUiSmallMargin boldElements sapthemeHightlight-asColor" />
                             </content>
